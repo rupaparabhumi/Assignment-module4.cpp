@@ -42,7 +42,6 @@ public:
     }
     void getDisplay()
     {
-        // float percentage, salary;
         cout << "\n-------------" << endl;
         cout << "Name:" << Name << endl;
         cout << "Age:" << Age << endl;
