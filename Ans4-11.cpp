@@ -44,4 +44,6 @@ int main()
         cout << "Area of circle:" << C1.AreaCricle(r) << endl;
         cout << "Area of Rectangle:" << C1.AreaRectangle(l, b) << endl;
         cout << "Area of Triangle:" << C1.AreaTriangle(b, h) << endl;
+
+        return 0;
 }
