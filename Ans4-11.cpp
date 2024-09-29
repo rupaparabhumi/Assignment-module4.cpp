@@ -27,7 +27,7 @@ public:
 };
 int main()
 {
-        float r, l, b, breadth, h;
+        float r, l, b, h;
 
         cout << "Enter your r:";
         cin >> r;
@@ -35,8 +35,6 @@ int main()
         cin >> l;
         cout << "Enter your b:";
         cin >> b;
-        // cout << "Enter your breadth:";
-        // cin >> breadth;
         cout << "Enter your h:";
         cin >> h;
         Calculate C1;
