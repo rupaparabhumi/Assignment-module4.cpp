@@ -55,4 +55,6 @@ int main()
    B1.getName();
    B1.getinput_data();
    B1.getDisplay();
+
+     return 0;
 }
