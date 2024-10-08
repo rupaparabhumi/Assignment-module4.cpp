@@ -1,47 +1,35 @@
 #include <iostream>
 using namespace std;
 
-class A
+class Base
 {
-private:
-    int PVE = 100;
+public:
+    int A;
 
 protected:
-    int PTD = 200;
+    int B;
 
-public:
-    int PBC = 300;
-
-    void getPTD()
-    {
-        cout << "\nProtected:" << PTD;
-    }
+private:
+    int C;
 };
 
-class publicB : public A
+class Derived : public Base
 {
 public:
-    int PVE = 100;
-    int PBC = 300;
-    void getPTD()
+    void display()
     {
-        cout << "\nProtected:" << PTD;
-    }
-    void getPVE()
-    {
-        cout << "\nPrivate:" << PVE;
-    }
-    void getPBC()
-    {
-        cout << "\nPublic:" << PBC;
+        A = 100;
+        B = 200;
+        cout << "Public:" << A << endl;
+        cout << "protected:" << B << endl;
     }
 };
 
 int main()
 {
-    publicB object;
+    Derived D1;
+    D1.display();
 
-    object.getPVE();
-    object.getPTD();
-    object.getPBC();
+    return 0;
 }
+  
