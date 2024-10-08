@@ -3,31 +3,33 @@ using namespace std;
 
 class Calculator
 {
-
 public:
     // inline function use
-    inline float mul(float num1, float num2)
+    inline int multi(int a, int b)
     {
-        return (num1 * num2);
+        return (a * b);
     }
-    inline int club(int num1, int num2)
+    inline int club(int n)
     {
-        return (num1 * num1 * num1);
+        return (n * n * n);
     }
 };
+
 int main()
 {
-    float number, num1, num2, mul, club;
+    int num1, num2, multi, club;
+
     cout << "Enter the number:";
     cin >> num1;
     cout << "Enter the number:";
     cin >> num2;
 
-    mul = num1 * num2;
-    cout << "multiplication:" << mul << endl;
+    multi = num1 * num2;
+    cout << "multiplication:" << multi << endl;
 
     club = num1 * num1 * num1;
     cout << "club:" << club << endl;
 
     return 0;
 }
+
