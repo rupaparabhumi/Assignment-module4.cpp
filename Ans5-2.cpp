@@ -1,40 +1,43 @@
 #include <iostream>
 using namespace std;
 
+#define N 5
 template <class T>
-void sortArray(T arr[], int size)
+
+void sort<T arr,int size>
 {
-  for (int i = 0; i < size - 1; i++)
+  for(int i=0;i<size;i++)
+ {
+  for(int j=i+1;j<size;i++)
   {
-    for (int j = 0; j < size - i - 1; j++)
-    {
-      if (arr[j] > arr[j + 1])
-      {
-        T temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
-    }
+  if(arr[i]>arr[j])
+   {
+    T temp;
+    temp=arr[i];
+    arr[i]=arr[j];
+    arr[j]=temp;
+   }
   }
+ }
 }
 
 int main()
 {
-  int arr[] = {20, 17, 32, 44};
-  int size = sizeof(arr) / sizeof(arr[0]);
-  int num;
+  int array[N];
 
-  cout << "Before sorting:" << endl;
-  for (int num : arr)
-    cout << num << "" << endl;
-  cout << endl;
+cout<<"Enter your sort array:";
+for(int i=0;i<N;i++)
+{
+  cin>>array[i];
+}
 
-  sortArray(arr, size);
+sort(array,N);
 
-  cout << "After sorting:" << endl;
-  for (int num : arr)
-    cout << num << "" << endl;
-  cout << endl;
+cout<<"sort the array:";
+for(int i=0;i<N;i++)
+{
+  cout<<array[i]<<",";
+}
 
-  return 0;
+return 0;
 }
